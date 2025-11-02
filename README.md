@@ -17,7 +17,7 @@ This project implements a simple chatbot system with user authentication, AI res
 
 | Component | URL |
 |----------|-----|
-| **Chatbot Worker API** | *your-worker-url* |
+| **Chatbot Worker API** | *https://cold-hat-64d0.gaetanogiannelligg.workers.dev/* |
 | **Frontend** | *localhost:5173* |
 | **Mock MCP Server** | *localhost:3001* |
 
@@ -35,4 +35,69 @@ This project implements a simple chatbot system with user authentication, AI res
 ---
 
 ## Project Structure
+```
+chatbotbuild
+|
+├─ chatbot-worker → Cloudflare Worker backend (chat + MCP call)
+|  └─ cold-hat-64d0
+|     └─ src
+|        └─ index.js
+├─ chatbot-frontend → React app (authentication + chat UI)
+|  └─ src
+|     └─ App.jsx
+└─ chatbot-mock-mcp → Example MCP webhook server
+   └─ mock-mcp.js
+```
+---
+
+## Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/GaetanoGiannelli/chatbotbuild.git
+cd chatbotbuild
+```
+### Frontend
+
+#### 2.1 Frontend .env
+```bash
+cp chatbot-frontend/.env.example chatbot-frontend/.env
+# Now is already filled, but in general fill the values
+```
+
+#### 2.2 Run Frontend
+
+```bash
+cd chatbot-frontend
+npm install
+npm run dev
+```
+
+### 3. Run Mock MCP Server
+
+```bash
+cd chatbot-mock-mcp
+node mock-mcp.js
+```
+
+## How to Use
+
+1. Open the frontend
+
+2. Sign up or log in
+
+3. Send messages to the chatbot
+
+4. To connect external MCP:
+
+5. Enter a webhook URL under Connect MCP
+
+6. Save it
+
+7. Send another message to see MCP results added to reply
+
+## TODO
+1. Deploy frontend
+2. Deploy Mock MCP Server
 

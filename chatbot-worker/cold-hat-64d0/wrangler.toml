@@ -1,0 +1,7 @@
+name = "cold-hat-64d0"
+main = "src/index.js"
+compatibility_date = "2025-10-30"
+
+# Observability
+[observability]
+enabled = true
