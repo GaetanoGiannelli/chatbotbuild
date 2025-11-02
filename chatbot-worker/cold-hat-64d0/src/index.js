@@ -13,7 +13,7 @@ export default {
         },
       });
     }
-    env.GEMINI_API_KEY = "AIzaSyBi0hLux5m_pZOeIoFyHsae-JZ87QsD0xc"
+
     if (!env.GEMINI_API_KEY) {
       return new Response(
         JSON.stringify({ error: "GEMINI_API_KEY is undefined!" }),
