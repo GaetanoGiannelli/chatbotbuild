@@ -1,8 +1,5 @@
-# chatbotbuild
-The goal of this assessment is to build a simple but complete chatbot using Cloudflare Workers and Supabase
-
 # Chatbot Assessment Project
-
+The goal of this assessment is to build a simple but complete chatbot using Cloudflare Workers and Supabase.
 This project implements a simple chatbot system with user authentication, AI responses, and optional external MCP tool integration.
 
 ## Tech Stack
