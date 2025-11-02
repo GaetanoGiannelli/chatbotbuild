@@ -80,6 +80,8 @@ npm run dev
 cd chatbot-mock-mcp
 node mock-mcp.js
 ```
+> **WARNING**: The local mock MCP server only works if you run the chatbot worker locally. In this case, you must set the previous Chatbot Worker API to `http://localhost:8787`.
+Remember to update the `VITE_WORKER_CHAT_URL` environment variable in `chatbot-frontend/.env`
 
 ## How to Use
 
