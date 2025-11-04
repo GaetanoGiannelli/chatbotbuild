@@ -18,8 +18,8 @@ This project implements a simple chatbot system with user authentication, AI res
 | Component | URL |
 |----------|-----|
 | **Chatbot Worker API** | *https://cold-hat-64d0.gaetanogiannelligg.workers.dev/* |
-| **Frontend** | *localhost:5173* |
-| **Mock MCP Server** | *localhost:3001* |
+| **Frontend** | *https://chatbot-frontend-4ub.pages.dev/* |
+| **Mock MCP Server** | *https://useful-sheep-26.deno.dev/* |
 
 ---
 
@@ -46,7 +46,7 @@ chatbotbuild
 |  └─ src
 |     └─ App.jsx
 └─ chatbot-mock-mcp → Example MCP webhook server
-   └─ mock-mcp.js
+   └─ index.js
 ```
 ---
 
@@ -74,15 +74,6 @@ npm install
 npm run dev
 ```
 
-### 3. Run Mock MCP Server
-
-```bash
-cd chatbot-mock-mcp
-node mock-mcp.js
-```
-> **WARNING**: The local mock MCP server only works if you run the chatbot worker locally. In this case, you must set the previous Chatbot Worker API to `http://localhost:8787`.
-Remember to update the `VITE_WORKER_CHAT_URL` environment variable in `chatbot-frontend/.env`
-
 ## How to Use
 
 1. Open the frontend
@@ -93,13 +84,9 @@ Remember to update the `VITE_WORKER_CHAT_URL` environment variable in `chatbot-f
 
 4. To connect external MCP:
 
-5. Enter a webhook URL under Connect MCP
+   4.1 Enter a webhook URL under Connect MCP
 
-6. Save it
+   4.2 Save it
 
-7. Send another message to see MCP results added to reply
-
-## TODO
-1. Deploy frontend
-2. Deploy Mock MCP Server
+5. Send another message to see MCP results added to reply
 
